@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phoebe's playlist</title>
+    <style>
+        body {
+            background-color:#ffebcd;
+        }
+
+        div {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px 20px;
+        }
+
+        h1 {
+            text-align: center;
+            border: solid #b284e6;
+            font-size: 48px;
+            border-radius: 20px;
+            padding: 10px 20px;
+        }
+        h2 {
+            font-size: 36px;
+            text-align: center;
+            border-bottom: ridge #ffffff;
+            padding: 10px 5px;
+            font-weight: 64px;
+        }
+
+        .image {
+            display: block;
+            margin: 0 auto;
+            border-radius: 25px;
+        }
+
+        .content {
+            text-align:justify;
+            line-height: 2;
+            text-justify: left;
+            border-top: ridge #ffffff;
+            padding: 10px 0;
+            font-size: 18px;
+        }
+
+        .learn {
+            text-decoration:double;
+            color: #4e0886;
+            transition: all ease-in-out 200ms;
+        }
+        
+        .learn:hover {
+            color: green;
+            cursor: pointer;
+        }
+
+        button {
+            text-decoration: none;
+            display: block;
+            margin: 0 auto;
+            padding: 15px 15px;
+            font-family:'Franklin Gothic Medium';
+            background-color: #72f8c0;
+            border-color: aqua;
+            border-radius: 25px;
+            transition: all ease-in-out 300ms;
+            font-size: 20px;
+        }
+        button:hover {
+            background-color: #ffffff;
+            color: aqua;
+            cursor: pointer;
+            box-shadow: 20 20 20 20px;
+            box-shadow: rgba(37, 39, 89, 0.08) 0px 20px 20px 0;
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <h1>
+            I love music! 🎧
+        </h1>
+        <h2>
+            My favorite is 
+            <span>
+                <em>R&B💗</em>
+            </span>
+        </h2>
+        <image 
+            class="image"
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/060/370/original/istockphoto-1203264140-612x612.jpg?1672083789"
+            alt = "R&B"
+            width = "300"
+        /> 
+        <p class="content">
+            Contemporary R&B is a popular music genre that combines rhythm and
+            blues with elements of pop, soul, funk, hip hop, and electronic 
+            music. The genre features a distinctive record production style, 
+            drum machine-backed rhythms, pitch corrected vocals, and a smooth,
+            lush style of vocal arrangement.  
+        </p>
+        <a
+            href="https://en.wikipedia.org/wiki/Contemporary_R%26B"
+            class="learn">
+            click to learn more!
+        </a>
+
+        <button>
+            Listen to R&B<br/>😍😍😍 
+        </button>
+    </div>
+    <script>
+        function playlist(){
+            let name = prompt("What is your name?");
+            let email = prompt("What is your email address?");
+            if(email.length === 0){
+                alert("Oh oh! we didn't get your contact information. :(");
+            } else {
+                alert(`Thank you ${name}. I will share my R&B playlist via email. :)`);
+            }
+        }
+
+        let musicButton = document.querySelector("button")
+        musicButton.addEventListener("click", playlist)
+    </script>
+</body>
+</html>
